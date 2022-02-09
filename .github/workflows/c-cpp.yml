@@ -1,4 +1,4 @@
-name: C/C++ CI
+name: workshop
 
 on:
   push:
@@ -12,12 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - uses:
+    - name: install_criterion.sh
+      run: chmod 755 install_criterion.sh
+      run: ./install_criterion.sh
+    - name: make build
+      run: make build
+    - name: make build_test
+      run: make build_test
