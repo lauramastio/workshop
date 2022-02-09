@@ -11,7 +11,7 @@ Test(test_string_fct, my_strlen) {
 }
 
 Test(test_string_fct, my_strcat) {
-    cr_assert_str_eq(my_strcat("Te", ""), "Test", "%s", "my_strcat failed");
+    cr_assert_str_eq(my_strcat("Te", "st"), "Test", "%s", "my_strcat failed");
     cr_assert_str_eq(my_strcat("Hel", "lo"), "Hello", "%s", "my_strcat failed");
     cr_assert_str_eq(my_strcat("Run test wi", "th criterion"), "Run test with criterion", "%s", "my_strcat failed");
 }
